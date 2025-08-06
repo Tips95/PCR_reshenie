@@ -6,6 +6,26 @@ import Image from 'next/image'
 const Services = () => {
   const services = [
     {
+      title: 'Банкротство физических лиц',
+      description: 'Списание всех долгов через процедуру банкротства. Освобождение от долговых обязательств по закону',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      features: ['Списание кредитов', 'Списание микрозаймов', 'Освобождение от долгов']
+    },
+    {
+      title: 'Арбитражное управление',
+      description: 'Профессиональное сопровождение процедур банкротства, защита интересов в арбитражном суде, работа с кредиторами',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      features: ['Арбитражные управляющие', 'Сопровождение торгов', 'Взаимодействие с кредиторами']
+    },
+    {
       title: 'Юридические консультации',
       description: 'Бесплатные первичные консультации и детальный анализ вашей ситуации',
       icon: (
@@ -26,26 +46,6 @@ const Services = () => {
       features: ['Составление исков', 'Участие в заседаниях', 'Обжалование решений']
     },
     {
-      title: 'Составление документов',
-      description: 'Подготовка всех необходимых документов для защиты ваших интересов',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
-      features: ['Договоры', 'Претензии', 'Жалобы']
-    },
-    {
-      title: 'Семейное право',
-      description: 'Решение всех вопросов, связанных с семейными отношениями',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      ),
-      features: ['Разводы', 'Раздел имущества', 'Алименты']
-    },
-    {
       title: 'Гражданское право',
       description: 'Решение гражданских споров и защита прав потребителей',
       icon: (
@@ -56,14 +56,14 @@ const Services = () => {
       features: ['Договорные споры', 'Защита прав потребителей', 'Возмещение ущерба']
     },
     {
-      title: 'Административное право',
-      description: 'Споры с государственными органами и административные дела',
+      title: 'Семейное право',
+      description: 'Решение всех вопросов, связанных с семейными отношениями',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       ),
-      features: ['Споры с ГИБДД', 'Налоговые споры', 'Земельные споры']
+      features: ['Разводы', 'Раздел имущества', 'Алименты']
     }
   ]
 
@@ -78,10 +78,10 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-dark-900 mb-6">
-            Наши услуги
+            Услуги по банкротству и арбитражному управлению
           </h2>
           <p className="text-lg text-dark-600 max-w-3xl mx-auto">
-            Полный спектр юридических услуг для физических и юридических лиц
+            Профессиональная помощь в банкротстве физических лиц, арбитражном управлении и гражданских делах в Грозном
           </p>
         </motion.div>
 
@@ -138,32 +138,38 @@ const Services = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-dark-900 mb-4">
-                Почему выбирают нас?
+                Почему выбирают нас для банкротства и арбитража?
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-center text-dark-600">
                   <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Бесплатная первичная консультация
+                  Бесплатная первичная консультация по банкротству
                 </li>
                 <li className="flex items-center text-dark-600">
                   <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Работаем по всей России
+                  Опытные арбитражные управляющие
                 </li>
                 <li className="flex items-center text-dark-600">
                   <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Гарантия конфиденциальности
+                  Работаем по всей России, включая Грозный
                 </li>
                 <li className="flex items-center text-dark-600">
                   <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Персональный подход к каждому делу
+                  Гарантия конфиденциальности и адвокатская тайна
+                </li>
+                <li className="flex items-center text-dark-600">
+                  <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Персональный подход к каждому делу о банкротстве и арбитраже
                 </li>
               </ul>
             </div>
@@ -172,7 +178,7 @@ const Services = () => {
                 <Image src={require('@/assets/logo.png')} alt="Логотип компании" width={96} height={96} className="object-contain" />
               </div>
               <p className="text-dark-600">
-                Получите профессиональную консультацию уже сегодня
+                Получите бесплатную консультацию по банкротству уже сегодня
               </p>
             </div>
           </div>

@@ -15,15 +15,24 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
+    setIsSubmitted(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setIsSubmitted(true)
+        setFormData({ name: '', phone: '', question: '' })
+      } else {
+        const data = await res.json()
+        alert(data.message || 'Ошибка при отправке заявки')
+      }
+    } catch (err) {
+      alert('Ошибка при отправке заявки')
+    }
     setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: '', phone: '', question: '' })
-    
-    // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000)
   }
 
@@ -79,10 +88,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-dark-900 mb-6">
-            Свяжитесь с нами
+            Получите бесплатную консультацию по банкротству
           </h2>
           <p className="text-lg text-dark-600 max-w-3xl mx-auto">
-            Получите бесплатную консультацию от наших специалистов
+            Оставьте заявку и наш юрист по банкротству свяжется с вами для бесплатной консультации
           </p>
         </motion.div>
 
@@ -96,24 +105,11 @@ const Contact = () => {
             className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
           >
             <h3 className="text-2xl font-bold text-dark-900 mb-6">
-              Отправить заявку
+              Заявка на консультацию по банкротству
             </h3>
             
             {isSubmitted && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6"
-              >
-                <div className="flex items-center">
-                  <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-green-800 font-medium">
-                    Заявка отправлена! Мы свяжемся с вами в ближайшее время.
-                  </span>
-                </div>
-              </motion.div>
+              <div className="mt-4 text-green-600 font-semibold">Ваша заявка успешно отправлена!</div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -169,7 +165,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+                {isSubmitting ? 'Отправка...' : 'Получить бесплатную консультацию'}
               </button>
             </form>
           </motion.div>

@@ -46,8 +46,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-dark-900 mb-6"
           >
-            Правовой центр{' '}
-            <span className="text-gradient">Решение</span>
+            Банкротство физических лиц{' '}
+            <span className="text-gradient">в Грозном</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -57,7 +57,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl sm:text-2xl text-dark-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Защита ваших прав — наша профессия
+            Списание долгов через суд — наша специализация
           </motion.p>
 
           {/* Description */}
@@ -67,8 +67,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg text-dark-500 mb-12 max-w-2xl mx-auto"
           >
-            Опытные юристы с более чем 10-летним стажем работы. 
-            Специализируемся на гражданских и административных делах.
+            Опытные юристы по банкротству с более чем 10-летним стажем. 
+            Помогаем списать долги по кредитам, микрозаймам и другим обязательствам.
           </motion.p>
 
           {/* CTA Button */}
@@ -82,8 +82,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary text-lg px-8 py-4"
+                onClick={scrollToContact}
               >
-                Получить консультацию
+                Бесплатная консультация по банкротству
               </motion.button>
               <motion.a
                 href="tel:+79090077757"
@@ -107,16 +108,16 @@ const Hero = () => {
             className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">10+</div>
-              <div className="text-dark-600">Лет опыта</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
-              <div className="text-dark-600">Выигранных дел</div>
+              <div className="text-dark-600">Списанных долгов</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
-              <div className="text-dark-600">Конфиденциальность</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">95%</div>
+              <div className="text-dark-600">Успешных банкротств</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary-600 mb-2">Бесплатно</div>
+              <div className="text-dark-600">Первичная консультация</div>
             </div>
           </motion.div>
         </motion.div>

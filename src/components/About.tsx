@@ -58,10 +58,10 @@ const About = () => {
               О компании
             </h2>
             <p className="text-lg text-dark-600 mb-8 leading-relaxed">
-              Правовой центр "Решение" — команда опытных юристов, специализирующихся на гражданских и административных делах. Работаем по всей России более 10 лет.
+              Правовой центр "Решение" — команда опытных юристов по банкротству, специализирующихся на списании долгов и гражданских делах. Работаем в Грозном и по всей России более 10 лет.
             </p>
             <p className="text-lg text-dark-600 mb-8 leading-relaxed">
-              Наша миссия — обеспечить каждому клиенту качественную правовую защиту и добиться справедливого решения в любой правовой ситуации. Мы гордимся тем, что помогаем людям отстаивать свои права и интересы.
+              Наша специализация — банкротство физических лиц и списание долгов через суд. Мы помогаем людям освободиться от долговых обязательств законным способом и начать жизнь с чистого листа.
             </p>
             
             {/* Features */}
@@ -109,20 +109,20 @@ const About = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-2">1000+</div>
-                    <div className="text-dark-600 text-sm">Довольных клиентов</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
+                    <div className="text-dark-600 text-sm">Списанных долгов</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-2">95%</div>
-                    <div className="text-dark-600 text-sm">Успешных дел</div>
+                    <div className="text-dark-600 text-sm">Успешных банкротств</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
-                    <div className="text-dark-600 text-sm">Поддержка</div>
+                    <div className="text-dark-600 text-sm">Консультации</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-2">5+</div>
-                    <div className="text-dark-600 text-sm">Специалистов</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-2">10+</div>
+                    <div className="text-dark-600 text-sm">Лет опыта</div>
                   </div>
                 </div>
               </div>
