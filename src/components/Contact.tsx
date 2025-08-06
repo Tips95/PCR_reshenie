@@ -69,7 +69,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-dark-50">
+    <section id="contact" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,7 +93,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 shadow-lg"
+            className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
           >
             <h3 className="text-2xl font-bold text-dark-900 mb-6">
               Отправить заявку
@@ -227,7 +227,7 @@ const Contact = () => {
             </div>
 
             {/* Working Hours */}
-            <div className="bg-white rounded-xl p-6 shadow-lg">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
               <h4 className="font-semibold text-dark-900 mb-4">
                 Режим работы
               </h4>

@@ -44,7 +44,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

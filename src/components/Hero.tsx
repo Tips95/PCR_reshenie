@@ -12,7 +12,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-dark-50 to-white">
+    <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

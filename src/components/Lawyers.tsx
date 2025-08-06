@@ -44,7 +44,7 @@ const Lawyers = () => {
   ]
 
   return (
-    <section id="lawyers" className="section-padding bg-dark-50">
+    <section id="lawyers" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ const Lawyers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               {/* Avatar */}
               <div className="w-40 h-40 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
