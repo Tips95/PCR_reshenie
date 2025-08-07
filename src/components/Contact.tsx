@@ -109,7 +109,9 @@ const Contact = () => {
             </h3>
             
             {isSubmitted && (
-              <div className="mt-4 text-green-600 font-semibold">Ваша заявка успешно отправлена!</div>
+              <div className="mt-4 text-green-600 font-semibold" role="alert">
+                Ваша заявка успешно отправлена!
+              </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -126,6 +128,7 @@ const Contact = () => {
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                   placeholder="Введите ваше имя"
+                  aria-describedby="name-help"
                 />
               </div>
 
@@ -142,6 +145,7 @@ const Contact = () => {
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                   placeholder="+7 (900) 123-45-67"
+                  aria-describedby="phone-help"
                 />
               </div>
 
@@ -157,6 +161,7 @@ const Contact = () => {
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Опишите вашу ситуацию..."
+                  aria-describedby="question-help"
                 />
               </div>
 
@@ -164,9 +169,15 @@ const Contact = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-describedby={isSubmitting ? "submitting-status" : undefined}
               >
                 {isSubmitting ? 'Отправка...' : 'Получить бесплатную консультацию'}
               </button>
+              {isSubmitting && (
+                <div id="submitting-status" className="sr-only">
+                  Отправка формы...
+                </div>
+              )}
             </form>
           </motion.div>
 

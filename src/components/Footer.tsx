@@ -51,7 +51,15 @@ const Footer = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center mr-3 overflow-hidden">
-                  <Image src={require('@/assets/logo.png')} alt="Логотип компании" width={40} height={40} className="object-contain" />
+                  <Image 
+                    src="/assets/logo.png" 
+                    alt="Логотип Правового центра Решение" 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                    loading="lazy"
+                    quality={85}
+                  />
                 </div>
                 <span className="text-xl font-bold">Правовой центр Решение</span>
               </div>
@@ -69,6 +77,7 @@ const Footer = () => {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="w-10 h-10 bg-dark-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-primary-400 hover:bg-dark-700 transition-colors"
+                    aria-label={`Ссылка на ${social.name}`}
                   >
                     {social.icon}
                   </motion.a>

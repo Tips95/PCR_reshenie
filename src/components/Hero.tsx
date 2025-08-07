@@ -35,7 +35,15 @@ const Hero = () => {
             className="mb-8"
           >
             <div className="w-20 h-20 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg overflow-hidden">
-              <Image src={require('@/assets/logo.png')} alt="Логотип компании" width={80} height={80} className="object-contain" />
+              <Image 
+                src="/assets/logo.png" 
+                alt="Логотип Правового центра Решение" 
+                width={80} 
+                height={80} 
+                className="object-contain"
+                priority
+                quality={90}
+              />
             </div>
           </motion.div>
 

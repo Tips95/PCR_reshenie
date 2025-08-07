@@ -11,7 +11,7 @@ const Lawyers = () => {
       phone: '+7 964 063-98-83',
       experience: '5 лет опыта',
       description: 'Эксперт по банкротству.',
-      photo: require('@/assets/lawyers/Amarbek.jpeg')
+      photo: '/assets/lawyers/Amarbek.jpeg'
     },
     {
       name: 'Ииев Ризван Султанович',
@@ -19,7 +19,7 @@ const Lawyers = () => {
       phone: '+7 988 905-87-02',
       experience: '9 лет опыта',
       description: 'Специализируется на гражданских делах и представительстве в суде.',
-      photo: require('@/assets/lawyers/Rizvan.jpeg')
+      photo: '/assets/lawyers/Rizvan.jpeg'
     },
     {
       name: 'Дербишев Рустам Вахидович',
@@ -27,7 +27,7 @@ const Lawyers = () => {
       phone: '+7 928 744-02-12',
       experience: '15 лет опыта',
       description: 'Эксперт по гражданским спорам, договорным отношениям и защите прав потребителей.',
-      photo: require('@/assets/lawyers/Rustam.jpeg')
+      photo: '/assets/lawyers/Rustam.jpeg'
     },
     {
       name: 'Юнусов Магомед Шамильевич',
@@ -74,7 +74,15 @@ const Lawyers = () => {
               {/* Avatar */}
               <div className="w-40 h-40 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                 {lawyer.photo ? (
-                  <Image src={lawyer.photo} alt={lawyer.name} width={160} height={160} className="object-cover w-40 h-40" />
+                  <Image 
+                    src={lawyer.photo} 
+                    alt={`Фото юриста ${lawyer.name}`} 
+                    width={160} 
+                    height={160} 
+                    className="object-cover w-40 h-40"
+                    loading="lazy"
+                    quality={85}
+                  />
                 ) : (
                   <div className="text-primary-600">
                     {/* fallback icon */}

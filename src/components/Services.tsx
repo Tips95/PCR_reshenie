@@ -175,7 +175,15 @@ const Services = () => {
             </div>
             <div className="text-center">
               <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                <Image src={require('@/assets/logo.png')} alt="Логотип компании" width={96} height={96} className="object-contain" />
+                <Image 
+                  src="/assets/logo.png" 
+                  alt="Логотип Правового центра Решение" 
+                  width={96} 
+                  height={96} 
+                  className="object-contain"
+                  loading="lazy"
+                  quality={85}
+                />
               </div>
               <p className="text-dark-600">
                 Получите бесплатную консультацию по банкротству уже сегодня

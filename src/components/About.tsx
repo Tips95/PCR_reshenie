@@ -102,7 +102,15 @@ const About = () => {
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 lg:p-12">
               <div className="text-center">
                 <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                  <Image src={require('@/assets/logo.png')} alt="Логотип компании" width={96} height={96} className="object-contain" />
+                  <Image 
+                    src="/assets/logo.png" 
+                    alt="Логотип Правового центра Решение" 
+                    width={96} 
+                    height={96} 
+                    className="object-contain"
+                    loading="lazy"
+                    quality={85}
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-dark-900 mb-4">
                   Наши достижения

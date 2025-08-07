@@ -79,10 +79,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="preload" href="/assets/logo.png" as="image" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/favicon.ico" sizes="180x180" />
       </head>
       <body className="antialiased">
         {children}
       </body>
     </html>
   )
-} 
+}
