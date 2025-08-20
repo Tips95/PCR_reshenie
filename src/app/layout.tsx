@@ -75,15 +75,35 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <meta name="google-site-verification" content="B8k-T2EDxuwZeJnNCTrZIvlUslNzq_5vNVz5Cb2HdlI" />
+        
+        {/* Preconnect для внешних доменов */}
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://forms.yandex.ru" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://forms.yandex.ru" />
+        
+        {/* Preload критических ресурсов */}
+        <link rel="preload" href="/assets/logo.png" as="image" type="image/png" />
+        <link rel="preload" href="/images/background.jpeg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/assets/lawyers/Amarbek.jpeg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/assets/lawyers/Rustam.jpeg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/assets/lawyers/Rizvan.jpeg" as="image" type="image/jpeg" />
+        
+        {/* Preload шрифтов */}
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="preload" href="/assets/logo.png" as="image" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="180x180" />
-        {/* Yandex.Metrika counter */}
+        
+        {/* Yandex.Metrika counter с defer для неблокирующей загрузки */}
         <script
+          defer
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `(function(m,e,t,r,i,k,a){

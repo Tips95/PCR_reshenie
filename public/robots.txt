@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://reshenie.ru/sitemap.xml
+
+# Crawl-delay для уважительного отношения к серверу
+Crawl-delay: 1
+
+# Блокировка технических файлов
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Разрешаем доступ к основным страницам
+Allow: /
+Allow: /assets/
+Allow: /images/ 
