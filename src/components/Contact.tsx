@@ -1,84 +1,45 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Script from 'next/script'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    question: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setIsSubmitted(false)
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      if (res.ok) {
-        setIsSubmitted(true)
-        setFormData({ name: '', phone: '', question: '' })
-      } else {
-        const data = await res.json()
-        alert(data.message || 'Ошибка при отправке заявки')
-      }
-    } catch (err) {
-      alert('Ошибка при отправке заявки')
-    }
-    setIsSubmitting(false)
-    setTimeout(() => setIsSubmitted(false), 5000)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }))
-  }
-
   const contactInfo = [
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
       title: 'Телефон',
-      value: '+7 900 123-45-67',
-      description: 'Горячая линия'
+      value: '+7 909 007-77-57',
     },
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: 'Email',
-      value: 'info@reshenie.ru',
-      description: 'Электронная почта'
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
       title: 'Адрес',
-      value: 'г. Москва, ул. Примерная, д. 123',
-      description: 'Главный офис'
-    }
+      value: 'г. Грозный, переулок Первомайский, д. 1',
+    },
+    {
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      title: 'Режим работы',
+      value: 'Пн-Пт: 9:00 - 18:00<br />Сб: 10:00 - 16:00<br />Вс: Выходной',
+    },
   ]
 
   return (
     <section id="contact" className="section-padding">
+      {/* Подключение скрипта Яндекс.Форм */}
+      <Script src="https://forms.yandex.ru/_static/embed.js" strategy="afterInteractive" />
+
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -96,7 +57,7 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+          {/* Яндекс.Форма */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -107,81 +68,17 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-dark-900 mb-6">
               Заявка на консультацию по банкротству
             </h3>
-            
-            {isSubmitted && (
-              <div className="mt-4 text-green-600 font-semibold" role="alert">
-                Ваша заявка успешно отправлена!
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-dark-700 mb-2">
-                  Ваше имя *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                  placeholder="Введите ваше имя"
-                  aria-describedby="name-help"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-dark-700 mb-2">
-                  Номер телефона *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                  placeholder="+7 (900) 123-45-67"
-                  aria-describedby="phone-help"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="question" className="block text-sm font-medium text-dark-700 mb-2">
-                  Ваш вопрос
-                </label>
-                <textarea
-                  id="question"
-                  name="question"
-                  value={formData.question}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Опишите вашу ситуацию..."
-                  aria-describedby="question-help"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-describedby={isSubmitting ? "submitting-status" : undefined}
-              >
-                {isSubmitting ? 'Отправка...' : 'Получить бесплатную консультацию'}
-              </button>
-              {isSubmitting && (
-                <div id="submitting-status" className="sr-only">
-                  Отправка формы...
-                </div>
-              )}
-            </form>
+            <iframe
+              src="https://forms.yandex.ru/cloud/689c485402848f5e0df5eaac?iframe=1"
+              width="100%"
+              height="400"
+              frameBorder="0"
+              name="ya-form-689c485402848f5e0df5eaac"
+              title="Яндекс Форма для консультации"
+            ></iframe>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Контактная информация */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -194,46 +91,21 @@ const Contact = () => {
                 Контактная информация
               </h3>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-dark-900 mb-1">{item.title}</h3>
+                      <p className="text-dark-600" dangerouslySetInnerHTML={{ __html: item.value }} />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-dark-900 mb-1">Телефон</h3>
-                    <p className="text-dark-600">+7 909 007-77-57</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-dark-900 mb-1">Адрес</h3>
-                    <p className="text-dark-600">г. Грозный, переулок Первомайский, д. 1</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-dark-900 mb-1">Режим работы</h3>
-                    <p className="text-dark-600">Пн-Пт: 9:00 - 18:00<br />Сб: 10:00 - 16:00<br />Вс: Выходной</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Working Hours */}
+            {/* Режим работы */}
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
               <h4 className="font-semibold text-dark-900 mb-4">
                 Режим работы
@@ -260,4 +132,4 @@ const Contact = () => {
   )
 }
 
-export default Contact 
+export default Contact
