@@ -1,0 +1,332 @@
+2025-08-20T16:13:22:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:13:31: 
+2025-08-20T16:13:31:  ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2025-08-20T16:14:48:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:15:26:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:17:28:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:18:10: 
+2025-08-20T16:18:10:  ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2025-08-20T16:18:12:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:19:12: 
+2025-08-20T16:19:12:  ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2025-08-20T16:22:40:  ⚠ For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'npm i sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+2025-08-20T16:37:18: 
+2025-08-20T16:37:18:  ⚠ metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+2025-08-21T13:47:44: Missing `origin` header from a forwarded Server Actions request.
+2025-08-21T13:47:44: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-21T20:53:06: Missing `origin` header from a forwarded Server Actions request.
+2025-08-21T20:53:06: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-21T23:16:49: Missing `origin` header from a forwarded Server Actions request.
+2025-08-21T23:16:49:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-22T10:31:41: Missing `origin` header from a forwarded Server Actions request.
+2025-08-22T10:31:41:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-22T14:24:55: Missing `origin` header from a forwarded Server Actions request.
+2025-08-22T14:24:55: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-22T21:50:20: Missing `origin` header from a forwarded Server Actions request.
+2025-08-22T21:50:20:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-23T09:16:14: Missing `origin` header from a forwarded Server Actions request.
+2025-08-23T09:16:14:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-23T20:25:37: Missing `origin` header from a forwarded Server Actions request.
+2025-08-23T20:25:37:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-24T07:35:42: Missing `origin` header from a forwarded Server Actions request.
+2025-08-24T07:35:42:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-24T19:02:28: Missing `origin` header from a forwarded Server Actions request.
+2025-08-24T19:02:28:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-24T21:21:39: Missing `origin` header from a forwarded Server Actions request.
+2025-08-24T21:21:39: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-25T07:08:55: Missing `origin` header from a forwarded Server Actions request.
+2025-08-25T07:08:55:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-25T09:30:28: Missing `origin` header from a forwarded Server Actions request.
+2025-08-25T09:30:28: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-25T09:30:30: Missing `origin` header from a forwarded Server Actions request.
+2025-08-25T09:30:30: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-25T23:59:59: Missing `origin` header from a forwarded Server Actions request.
+2025-08-25T23:59:59:  ⨯ TypeError: s is not a function
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6320
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5703)
+    at async rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22546)
+    at async doRender (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1391:30)
+    at async cacheEntry.responseCache.get.routeKind (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1552:28)
+    at async NextNodeServer.renderToResponseWithComponentsImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1460:28)
+    at async NextNodeServer.renderErrorToResponseImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:2101:24)
+    at async pipe.req.req (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:1975:30)
+    at async NextNodeServer.pipeImpl (/root/PCR_reshenie/node_modules/next/dist/server/base-server.js:909:25)
+2025-08-26T04:01:49: Missing `origin` header from a forwarded Server Actions request.
+2025-08-26T04:01:49: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-26T09:51:57: Missing `origin` header from a forwarded Server Actions request.
+2025-08-26T09:51:57: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-26T15:31:57: Missing `origin` header from a forwarded Server Actions request.
+2025-08-26T15:31:57: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-26T18:21:23: Missing `origin` header from a forwarded Server Actions request.
+2025-08-26T18:21:23: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-26T22:01:31: Missing `origin` header from a forwarded Server Actions request.
+2025-08-26T22:01:31: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-27T18:48:39: Missing `origin` header from a forwarded Server Actions request.
+2025-08-27T18:48:39: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-28T01:52:40: Missing `origin` header from a forwarded Server Actions request.
+2025-08-28T01:52:40: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-28T06:03:01: Missing `origin` header from a forwarded Server Actions request.
+2025-08-28T06:03:01: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-28T06:03:01: Missing `origin` header from a forwarded Server Actions request.
+2025-08-28T06:03:01: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-28T06:03:01: Missing `origin` header from a forwarded Server Actions request.
+2025-08-28T06:03:01: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+2025-08-28T06:03:02: Missing `origin` header from a forwarded Server Actions request.
+2025-08-28T06:03:02: Error: Failed to find Server Action "null". This request might be from an older or newer deployment. Original error: Invariant: Missing 'next-action' header.
+    at ry (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:1644)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:6358
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at rm (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:15:5711)
+    at rD (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:22552)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:25097
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:13:16241)
+    at /root/PCR_reshenie/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:16:24987
+    at AsyncLocalStorage.run (node:async_hooks:338:14)

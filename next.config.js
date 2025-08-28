@@ -10,7 +10,6 @@ const nextConfig = {
   
   // Оптимизация сборки
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion'],
   },
   
