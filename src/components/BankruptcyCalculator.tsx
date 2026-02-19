@@ -3,24 +3,67 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
+type PriceRange = { min: number; max: number | null; price: number }
+
 const BankruptcyCalculator = () => {
   const [debtAmount, setDebtAmount] = useState(300000)
-  const [calculatedPrice, setCalculatedPrice] = useState<number>(135000)
+  const [calculatedPrice, setCalculatedPrice] = useState<number>(145000)
 
-  const priceRanges = [
-    { min: 300000, max: 500000, price: 135000 },
-    { min: 500000, max: 750000, price: 175000 },
-    { min: 750000, max: 1000000, price: 200000 },
-    { min: 1000000, max: 1500000, price: 250000 },
-    { min: 1500000, max: 2000000, price: 350000 },
-    { min: 2000000, max: 3000000, price: 500000 },
-    { min: 3000000, max: 4000000, price: 600000 },
-    { min: 4000000, max: 5000000, price: 750000 },
+  const priceRanges: PriceRange[] = [
+    { min: 300000, max: 400000, price: 145000 },
+    { min: 400000, max: 500000, price: 155000 },
+    { min: 500000, max: 600000, price: 165000 },
+    { min: 600000, max: 700000, price: 175000 },
+    { min: 700000, max: 800000, price: 210000 },
+    { min: 800000, max: 900000, price: 220000 },
+    { min: 900000, max: 1000000, price: 230000 },
+    { min: 1000000, max: 1100000, price: 260000 },
+    { min: 1100000, max: 1200000, price: 270000 },
+    { min: 1200000, max: 1300000, price: 280000 },
+    { min: 1300000, max: 1400000, price: 290000 },
+    { min: 1400000, max: 1500000, price: 300000 },
+    { min: 1500000, max: 1600000, price: 360000 },
+    { min: 1600000, max: 1700000, price: 370000 },
+    { min: 1700000, max: 1800000, price: 380000 },
+    { min: 1800000, max: 1900000, price: 400000 },
+    { min: 1900000, max: 2000000, price: 410000 },
+    { min: 2000000, max: 2100000, price: 510000 },
+    { min: 2100000, max: 2200000, price: 520000 },
+    { min: 2200000, max: 2300000, price: 530000 },
+    { min: 2300000, max: 2400000, price: 540000 },
+    { min: 2400000, max: 2500000, price: 550000 },
+    { min: 2500000, max: 2600000, price: 560000 },
+    { min: 2600000, max: 2700000, price: 570000 },
+    { min: 2700000, max: 2800000, price: 580000 },
+    { min: 2800000, max: 2900000, price: 590000 },
+    { min: 2900000, max: 3000000, price: 600000 },
+    { min: 3000000, max: 3100000, price: 610000 },
+    { min: 3100000, max: 3200000, price: 620000 },
+    { min: 3200000, max: 3300000, price: 630000 },
+    { min: 3300000, max: 3400000, price: 640000 },
+    { min: 3400000, max: 3500000, price: 650000 },
+    { min: 3600000, max: 3700000, price: 660000 },
+    { min: 3800000, max: 3900000, price: 670000 },
+    { min: 3900000, max: 4000000, price: 680000 },
+    { min: 4000000, max: 4100000, price: 760000 },
+    { min: 4200000, max: 4300000, price: 770000 },
+    { min: 4300000, max: 4400000, price: 780000 },
+    { min: 4400000, max: 4500000, price: 790000 },
+    { min: 4500000, max: 4600000, price: 800000 },
+    { min: 4600000, max: 4700000, price: 810000 },
+    { min: 4700000, max: 4800000, price: 820000 },
+    { min: 4800000, max: 4900000, price: 830000 },
+    { min: 4900000, max: 5000000, price: 840000 },
+    { min: 5000000, max: null, price: 910000 },
   ]
 
-  const calculatePrice = (amount: number) => {
-    const range = priceRanges.find(range => amount >= range.min && amount <= range.max)
-    return range ? range.price : 135000
+  const calculatePrice = (amount: number): number => {
+    const range = priceRanges.find(r => amount >= r.min && (r.max === null || amount < r.max))
+    if (range) return range.price
+    if (amount < 300000) return 145000
+    if (amount >= 5000000) return 910000
+    const fallback = [...priceRanges].filter(r => r.min <= amount).sort((a, b) => b.min - a.min)[0]
+    return fallback?.price ?? 145000
   }
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,8 +77,11 @@ const BankruptcyCalculator = () => {
     return new Intl.NumberFormat('ru-RU').format(amount)
   }
 
-  const getCurrentRange = () => {
-    return priceRanges.find(range => debtAmount >= range.min && debtAmount <= range.max)
+  const getCurrentRange = (): PriceRange | undefined => {
+    const range = priceRanges.find(r => debtAmount >= r.min && (r.max === null || debtAmount < r.max))
+    if (range) return range
+    if (debtAmount >= 5000000) return priceRanges[priceRanges.length - 1]
+    return [...priceRanges].filter(r => r.min <= debtAmount).sort((a, b) => b.min - a.min)[0]
   }
 
   const currentRange = getCurrentRange()
@@ -113,7 +159,9 @@ const BankruptcyCalculator = () => {
                   Стоимость процедуры банкротства
                 </div>
                 <div className="text-sm text-dark-600">
-                  Для долгов от {formatCurrency(currentRange?.min || 0)} до {formatCurrency(currentRange?.max || 0)} ₽
+                  {currentRange?.max != null
+                    ? `Для долгов от ${formatCurrency(currentRange.min)} до ${formatCurrency(currentRange.max)} ₽`
+                    : `Для долгов от ${formatCurrency(currentRange?.min ?? 0)} ₽ и выше`}
                 </div>
               </div>
             </motion.div>
