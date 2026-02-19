@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Оптимизация изображений
+  // Статический экспорт для деплоя на Timeweb App Platform (только статика)
+  output: 'export',
+
+  // Изображения: при static export серверная оптимизация недоступна
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 дней
+    unoptimized: true,
   },
   
   // Оптимизация сборки
@@ -13,52 +13,8 @@ const nextConfig = {
     optimizePackageImports: ['framer-motion'],
   },
   
-  // Сжатие
   compress: true,
-  
-  // Оптимизация для production
   swcMinify: true,
-  
-  // Заголовки для кэширования и безопасности
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-      {
-        source: '/assets/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/images/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
 }
 
 module.exports = nextConfig 
