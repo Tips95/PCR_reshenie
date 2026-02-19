@@ -73,7 +73,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <div className="text-right">
                 <div className="text-sm text-dark-500">Бесплатная консультация</div>
-                <div className="text-dark-900 font-semibold">+7 909 007-77-57</div>
+                <div className="text-dark-900 font-semibold">+7 928 644-45-75</div>
               </div>
             </div>
 
@@ -116,7 +116,7 @@ const Header = () => {
               {/* Контакт в мобильном меню */}
               <div className="px-4 py-3 border-t border-gray-100">
                 <div className="text-sm text-dark-500 mb-1">Бесплатная консультация</div>
-                <div className="text-dark-900 font-semibold text-lg">+7 909 007-77-57</div>
+                <div className="text-dark-900 font-semibold text-lg">+7 928 644-45-75</div>
               </div>
             </div>
           </motion.div>
