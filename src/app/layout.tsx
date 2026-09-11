@@ -81,6 +81,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'B8k-T2EDxuwZeJnNCTrZIvlUslNzq_5vNVz5Cb2HdlI',
+    yandex: 'c35e8dfa6e000935',
   },
   category: 'legal services',
   icons: {
