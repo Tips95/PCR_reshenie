@@ -1,18 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://reshenie.ru/sitemap.xml
-
-# Crawl-delay для уважительного отношения к серверу
-Crawl-delay: 1
-
-# Блокировка технических файлов
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
-# Разрешаем доступ к основным страницам
+User-agent: Yandex
 Allow: /
-Allow: /assets/
-Allow: /images/ 
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&from
+
+Sitemap: https://pcr-reshenie.ru/sitemap.xml

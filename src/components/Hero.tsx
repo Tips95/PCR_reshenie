@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { PHONE } from '@/lib/site'
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
+    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-28">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -76,7 +77,8 @@ const Hero = () => {
             className="text-lg text-dark-500 mb-12 max-w-2xl mx-auto"
           >
             Опытные юристы по банкротству с более чем 10-летним стажем. 
-            Помогаем списать долги по кредитам, микрозаймам и другим обязательствам.
+            Помогаем списать долги по кредитам, микрозаймам и другим обязательствам — 
+            законно, под ключ и без визитов в суд.
           </motion.p>
 
           {/* CTA Button */}
@@ -85,7 +87,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -95,7 +97,7 @@ const Hero = () => {
                 Бесплатная консультация по банкротству
               </motion.button>
               <motion.a
-                href="tel:+79286444575"
+                href={`tel:${PHONE.tel}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary text-lg px-8 py-4 flex items-center justify-center"
@@ -103,7 +105,7 @@ const Hero = () => {
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                +7 928 644-45-75
+                {PHONE.display}
               </motion.a>
             </div>
           </motion.div>
@@ -113,14 +115,14 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
+            className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
               <div className="text-dark-600">Списанных долгов</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">95%</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
               <div className="text-dark-600">Успешных банкротств</div>
             </div>
             <div className="text-center">
@@ -136,7 +138,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none"
       >
         <div className="w-6 h-10 border-2 border-dark-300 rounded-full flex justify-center">
           <motion.div

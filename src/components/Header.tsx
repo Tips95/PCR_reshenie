@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { PHONE } from '@/lib/site'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,6 +11,7 @@ const Header = () => {
   const menuItems = [
     { name: 'О компании', href: '#about' },
     { name: 'Услуги', href: '#services' },
+    { name: 'Вопросы', href: '#faq' },
     { name: 'Юристы', href: '#lawyers' },
     { name: 'Контакты', href: '#contact' },
   ]
@@ -44,7 +46,7 @@ const Header = () => {
                 quality={90}
               />
             </div>
-            <span className="text-xl font-bold text-dark-900 whitespace-nowrap">
+            <span className="text-base lg:text-lg xl:text-xl font-bold text-dark-900 whitespace-nowrap">
               Правовой центр Решение
             </span>
           </motion.div>
@@ -59,7 +61,7 @@ const Header = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="px-6 py-2 rounded-full text-dark-600 hover:text-primary-600 hover:bg-white font-medium transition-all duration-300 whitespace-nowrap"
+                  className="px-4 py-2 rounded-full text-dark-600 hover:text-primary-600 hover:bg-white text-sm font-medium transition-all duration-300 whitespace-nowrap"
                 >
                   {item.name}
                 </motion.button>
@@ -71,10 +73,14 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* Контактная информация для больших экранов */}
             <div className="hidden md:flex items-center space-x-4">
-              <div className="text-right">
-                <div className="text-sm text-dark-500">Бесплатная консультация</div>
-                <div className="text-dark-900 font-semibold">+7 928 644-45-75</div>
-              </div>
+              <a href={`tel:${PHONE.tel}`} className="text-right group">
+                <div className="hidden xl:block text-sm text-dark-500 whitespace-nowrap">
+                  Бесплатная консультация
+                </div>
+                <div className="text-dark-900 font-semibold whitespace-nowrap group-hover:text-primary-600 transition-colors">
+                  {PHONE.display}
+                </div>
+              </a>
             </div>
 
             {/* Кнопка мобильного меню */}
@@ -114,10 +120,10 @@ const Header = () => {
                 </button>
               ))}
               {/* Контакт в мобильном меню */}
-              <div className="px-4 py-3 border-t border-gray-100">
+              <a href={`tel:${PHONE.tel}`} className="block px-4 py-3 border-t border-gray-100">
                 <div className="text-sm text-dark-500 mb-1">Бесплатная консультация</div>
-                <div className="text-dark-900 font-semibold text-lg">+7 928 644-45-75</div>
-              </div>
+                <div className="text-primary-600 font-semibold text-lg">{PHONE.display}</div>
+              </a>
             </div>
           </motion.div>
         )}

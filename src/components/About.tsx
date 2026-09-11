@@ -63,6 +63,11 @@ const About = () => {
             <p className="text-lg text-dark-600 mb-8 leading-relaxed">
               Наша специализация — банкротство физических лиц и списание долгов через суд. Мы помогаем людям освободиться от долговых обязательств законным способом и начать жизнь с чистого листа.
             </p>
+            <p className="text-lg text-dark-600 mb-8 leading-relaxed">
+              Списываем задолженность по кредитам, микрозаймам, кредитным картам и распискам. 
+              Берём на себя сбор документов, подготовку заявления и все заседания — вам не нужно 
+              ходить в суд и общаться с банками и коллекторами.
+            </p>
             
             {/* Features */}
             <div className="grid sm:grid-cols-2 gap-6">
@@ -121,12 +126,12 @@ const About = () => {
                     <div className="text-dark-600 text-sm">Списанных долгов</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-2">95%</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
                     <div className="text-dark-600 text-sm">Успешных банкротств</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
-                    <div className="text-dark-600 text-sm">Консультации</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-2">По РФ</div>
+                    <div className="text-dark-600 text-sm">Работаем дистанционно</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-2">10+</div>

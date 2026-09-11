@@ -2,24 +2,20 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { whatsappLink } from '@/lib/site'
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false)
-  
-  const phoneNumber = '79286444575'
-  const message = 'Здравствуйте! Хочу получить консультацию по банкротству.'
-  
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-  
+
   const handleClick = () => {
-    window.open(whatsappUrl, '_blank')
+    window.open(whatsappLink(), '_blank', 'noopener,noreferrer')
   }
 
   return (
     <>
-      {/* Плавающая кнопка WhatsApp */}
+      {/* Плавающая кнопка WhatsApp — на мобильных её заменяет нижняя панель */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="hidden md:block fixed bottom-6 right-6 z-50"
         initial={{ opacity: 0, scale: 0.8, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }}

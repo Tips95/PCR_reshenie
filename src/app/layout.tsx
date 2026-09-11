@@ -1,16 +1,190 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
+import {
+  ADDRESS,
+  COMPANY_NAME,
+  PHONE,
+  SITE_URL,
+  SOCIAL,
+} from '@/lib/site'
+
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
-  title: 'Банкротство физических лиц в Грозном | Списание долгов | Правовой центр Решение',
-  description: 'Банкротство физических лиц в Грозном. Списание долгов через суд. Бесплатная консультация юриста по банкротству. Опыт 10+ лет. Звоните: +7 928 644-45-75',
-  keywords: 'банкротство физических лиц, списание долгов, банкротство в Грозном, юрист по банкротству, списание кредитов, долги по кредитам, банкротство через суд, бесплатная консультация юриста, гражданские дела, правовая помощь',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Банкротство физических лиц в Грозном | Списание долгов | Правовой центр Решение',
+    template: '%s | Правовой центр Решение',
+  },
+  description:
+    'Банкротство физических лиц в Грозном под ключ: списание долгов по кредитам и микрозаймам через суд. Бесплатная консультация юриста, стаж 10+ лет, стоимость от 150 000 ₽. Звоните: +7 928 644-45-75',
+  keywords: [
+    'банкротство физических лиц',
+    'банкротство физических лиц Грозный',
+    'списание долгов',
+    'списание долгов по кредитам',
+    'юрист по банкротству Грозный',
+    'списание кредитов',
+    'банкротство через суд',
+    'внесудебное банкротство через МФЦ',
+    'арбитражное управление',
+    'бесплатная консультация юриста Грозный',
+    'юрист по гражданским делам Грозный',
+  ],
+  applicationName: COMPANY_NAME,
+  authors: [{ name: COMPANY_NAME, url: SITE_URL }],
+  creator: COMPANY_NAME,
+  publisher: COMPANY_NAME,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Банкротство физических лиц в Грозном | Списание долгов',
-    description: 'Банкротство физических лиц в Грозном. Списание долгов через суд. Бесплатная консультация юриста по банкротству.',
+    title: 'Банкротство физических лиц в Грозном | Списание долгов через суд',
+    description:
+      'Спишем долги по кредитам и микрозаймам законным способом. Опыт 10+ лет, сопровождение под ключ, бесплатная первичная консультация.',
+    url: SITE_URL,
+    siteName: COMPANY_NAME,
     type: 'website',
     locale: 'ru_RU',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Правовой центр Решение — банкротство физических лиц в Грозном',
+      },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Банкротство физических лиц в Грозном | Списание долгов через суд',
+    description:
+      'Спишем долги по кредитам и микрозаймам законным способом. Бесплатная консультация юриста по банкротству.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  verification: {
+    google: 'B8k-T2EDxuwZeJnNCTrZIvlUslNzq_5vNVz5Cb2HdlI',
+  },
+  category: 'legal services',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'LegalService',
+      '@id': `${SITE_URL}/#organization`,
+      name: COMPANY_NAME,
+      alternateName: 'Правовой центр Решение',
+      description:
+        'Банкротство физических лиц в Грозном. Списание долгов по кредитам и микрозаймам через суд, арбитражное управление, гражданские дела. Бесплатная консультация юриста.',
+      url: SITE_URL,
+      telephone: `+${PHONE.tel.replace(/\D/g, '')}`,
+      image: `${SITE_URL}/assets/logo.png`,
+      logo: `${SITE_URL}/assets/logo.png`,
+      priceRange: 'от 150 000 ₽',
+      currenciesAccepted: 'RUB',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: ADDRESS.street,
+        addressLocality: ADDRESS.locality,
+        addressRegion: ADDRESS.region,
+        addressCountry: ADDRESS.country,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '18:00',
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: 'Saturday',
+          opens: '10:00',
+          closes: '16:00',
+        },
+      ],
+      areaServed: [
+        { '@type': 'City', name: 'Грозный' },
+        { '@type': 'State', name: 'Чеченская Республика' },
+        { '@type': 'Country', name: 'Россия' },
+      ],
+      knowsLanguage: ['ru'],
+      sameAs: [SOCIAL.telegram, SOCIAL.whatsapp],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Услуги по банкротству и юридическому сопровождению',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Банкротство физических лиц',
+              description:
+                'Списание долгов через процедуру банкротства под ключ: подготовка заявления, работа с финансовым управляющим, сопровождение в суде.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Списание долгов по кредитам и микрозаймам',
+              description:
+                'Освобождение от обязательств перед банками, МФО и коллекторами законным способом.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Арбитражное управление',
+              description:
+                'Сопровождение процедур банкротства, работа с кредиторами и торгами.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Представительство в суде',
+              description:
+                'Ведение гражданских дел от подачи иска до исполнения решения суда.',
+            },
+          },
+        ],
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: COMPANY_NAME,
+      inLanguage: 'ru-RU',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -18,112 +192,38 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Правовой центр Решение",
-    "description": "Банкротство физических лиц в Грозном. Списание долгов через суд. Бесплатная консультация юриста по банкротству.",
-    "url": "https://reshenie.ru",
-    "telephone": "+79286444575",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Грозный",
-      "addressRegion": "Чеченская Республика",
-      "streetAddress": "переулок Первомайский, д. 1"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "43.3119",
-      "longitude": "45.6889"
-    },
-    "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
-    "priceRange": "$$",
-    "serviceType": [
-      "Банкротство физических лиц",
-      "Списание долгов",
-      "Юридические консультации",
-      "Представительство в суде"
-    ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Грозный"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Услуги по банкротству",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Банкротство физических лиц",
-            "description": "Списание всех долгов через процедуру банкротства"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Списание долгов",
-            "description": "Помощь в списании долгов по кредитам и займам"
-          }
-        }
-      ]
-    }
-  }
-
   return (
-    <html lang="ru">
+    <html lang="ru" className={inter.variable}>
       <head>
-        <meta name="google-site-verification" content="B8k-T2EDxuwZeJnNCTrZIvlUslNzq_5vNVz5Cb2HdlI" />
-        
-        {/* Preconnect для внешних доменов */}
         <link rel="preconnect" href="https://mc.yandex.ru" />
         <link rel="preconnect" href="https://forms.yandex.ru" />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         <link rel="dns-prefetch" href="https://forms.yandex.ru" />
-        
-        {/* Preload критических ресурсов */}
+
         <link rel="preload" href="/assets/logo.png" as="image" type="image/png" />
-        <link rel="preload" href="/images/background.jpeg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/assets/lawyers/Amarbek.jpeg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/assets/lawyers/Rustam.jpeg" as="image" type="image/jpeg" />
-        <link rel="preload" href="/assets/lawyers/Rizvan.jpeg" as="image" type="image/jpeg" />
-        
-        {/* Preload шрифтов */}
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-        
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/favicon.ico" sizes="180x180" />
-        
-        {/* Yandex.Metrika counter с defer для неблокирующей загрузки */}
-        <script
-          defer
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(m,e,t,r,i,k,a){
+      </head>
+      <body className="antialiased">
+        {children}
+
+        <Script id="yandex-metrika" strategy="afterInteractive">
+          {`(function(m,e,t,r,i,k,a){
               m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
               m[i].l=1*new Date();
               for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
               k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
             })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103640261', 'ym');
-            ym(103640261, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
-          }}
-        />
+            ym(103640261, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`}
+        </Script>
         <noscript>
           <div>
             <img src="https://mc.yandex.ru/watch/103640261" style={{ position: 'absolute', left: '-9999px' }} alt="" />
           </div>
         </noscript>
-        {/* /Yandex.Metrika counter */}
-      </head>
-      <body className="antialiased">
-        {children}
       </body>
     </html>
   )

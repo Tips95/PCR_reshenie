@@ -9,33 +9,37 @@ const Lawyers = () => {
       name: 'Якубов Амарбек Хамидович',
       specialization: 'Юрист по гражданским делам',
       phone: '+7 964 063-98-83',
+      tel: '+79640639883',
       experience: '5 лет опыта',
       description: 'Эксперт по банкротству.',
-      photo: '/assets/lawyers/Amarbek.jpeg'
+      photo: '/assets/lawyers/Amarbek.webp'
     },
     {
       name: 'Ииев Ризван Султанович',
       specialization: 'Юрист по гражданским делам',
       phone: '+7 988 905-87-02',
+      tel: '+79889058702',
       experience: '9 лет опыта',
       description: 'Специализируется на гражданских делах и представительстве в суде.',
-      photo: '/assets/lawyers/Rizvan.jpeg'
+      photo: '/assets/lawyers/Rizvan.webp'
     },
     {
       name: 'Дербишев Рустам Вахидович',
       specialization: 'Гражданское право',
       phone: '+7 928 744-02-12',
+      tel: '+79287440212',
       experience: '15 лет опыта',
       description: 'Эксперт по гражданским спорам, договорным отношениям и защите прав потребителей.',
-      photo: '/assets/lawyers/Rustam.jpeg'
+      photo: '/assets/lawyers/Rustam.webp'
     },
     {
       name: 'Юнусов Магомед Шамильевич',
       specialization: 'Юрист по гражданским делам',
       phone: '+7 928 644-45-75',
+      tel: '+79286444575',
       experience: '8 лет опыта',
       description: 'Банкротство, гражданские дела, автоюрист.',
-      photo: '/assets/lawyers/Yunusov.jpeg'
+      photo: '/assets/lawyers/Yunusov.webp'
     }
   ]
 
@@ -105,12 +109,16 @@ const Lawyers = () => {
                 </p>
                 
                 {/* Phone */}
-                <div className="flex items-center justify-center space-x-2 text-primary-600 font-medium">
+                <a
+                  href={`tel:${lawyer.tel}`}
+                  className="flex items-center justify-center space-x-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                  aria-label={`Позвонить юристу ${lawyer.name}`}
+                >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span className="text-sm">{lawyer.phone}</span>
-                </div>
+                </a>
               </div>
             </motion.div>
           ))}
